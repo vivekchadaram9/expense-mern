@@ -2,5 +2,5 @@ projectKey=expense
 serverUrl=http://localhost:9090
 serverVersion=25.4.0.105899
 dashboardUrl=http://localhost:9090/dashboard?id=expense
-ceTaskId=bab11821-bed2-4278-b4e1-4b149b2679fe
-ceTaskUrl=http://localhost:9090/api/ce/task?id=bab11821-bed2-4278-b4e1-4b149b2679fe
+ceTaskId=89944c92-ffc3-42b2-8111-d87bffc77044
+ceTaskUrl=http://localhost:9090/api/ce/task?id=89944c92-ffc3-42b2-8111-d87bffc77044

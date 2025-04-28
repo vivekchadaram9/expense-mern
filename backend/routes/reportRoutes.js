@@ -3,18 +3,19 @@ const Report = require("../models/reportModel");
 const router = express.Router();
 
 router.get("/getByUserId?", async (req, res) => {
-    try {
-      const { userId } = req.query;
-      const report = await Report.find({user_id:userId});
-      if (report) {
-        res.status(200).json({ success: true, data: report });
-      } else {
-        res.status(400).json({ message: "Reports not found" });
-      }
-    } catch (error) {
-      res.status(500).json({ message: "Server error" });
+  try {
+    const { userId } = req.query;
+    const report = await Report.find({ user_id: userId });
+    if (report.length > 0) {
+      // Check if the array is not empty
+      res.status(200).json({ success: true, data: report });
+    } else {
+      res.status(400).json({ message: "Reports not found" });
     }
-  });
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
+});
 
 
   router.get("/getByReportId?", async (req, res) => {
